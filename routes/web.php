@@ -54,4 +54,11 @@ Route::get("/lol", function () {
    foreach ($articulos as $articulo) {
        echo var_dump($articulo->nombre);
    }
+   $articulos = Articulo::where("seccion", "Auto")->get();
+   foreach ($articulos as $articulo) {
+       echo var_dump($articulo->nombre);
+   }
+   
+
+   
 });
